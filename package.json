@@ -1,0 +1,24 @@
+{
+  "name": "converter",
+  "version": "1.0.0",
+  "description": "Media converting microservice",
+  "main": "index.js",
+  "repository": "git@github.com:tritonmedia/converter",
+  "author": "Jared Allard <jaredallard@outlook.com>",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.6.0",
+    "debug": "^3.1.0",
+    "form-data": "^2.3.2",
+    "fs-extra": "^5.0.0",
+    "ioredis": "^3.2.2",
+    "klaw": "^2.1.1",
+    "kubernetes-client": "^5.1.0",
+    "kue": "^0.11.6",
+    "lodash": "^4.17.5",
+    "node-ffprobe": "^1.2.2",
+    "request": "^2.85.0",
+    "request-promise-native": "^1.0.5",
+    "webtorrent": "^0.98.24"
+  }
+}
