@@ -12,7 +12,7 @@ jobs:
             - v1-{{ .Branch }}
           paths:
             - /caches/app.tar
-      - run: docker build --cache-from=app -t app .
+      - run: docker build -f .circleci/Dockerfile --cache-from=app -t app .
       - run:
           name: Save Docker image layer cache
           command: |
