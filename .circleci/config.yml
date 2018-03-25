@@ -42,4 +42,4 @@ workflows:
   build-test-push:
     jobs:
       - build:
-          context: docker
+          context: Docker
