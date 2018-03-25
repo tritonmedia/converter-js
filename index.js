@@ -27,7 +27,7 @@ debug('init', Date.now())
 const init   = async () => {
   const config = await Config('converter')
 
-  if(await fs.exists(K8_TOKEN)) {
+/*   if(await fs.exists(K8_TOKEN)) {
     debug('k8', 'we\'re running in kubernetes')
     const core = new K8.Core({
       url: 'https://kubernetes:443',
@@ -57,7 +57,7 @@ const init   = async () => {
       config.instance.throttled = true
       config.instance.throttle_upload = throttled
     }
-  }
+  } */
 
 
   debug('eval-constraints')
