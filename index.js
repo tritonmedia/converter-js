@@ -60,7 +60,7 @@ const init   = async () => {
   }
 
 
-  debug('eval-constraints', )
+  debug('eval-constraints')
 
   await require('./lib/main')(config, queue)
 }
