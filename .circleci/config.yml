@@ -1,7 +1,6 @@
 version: 2
 jobs:
   build:
-    context: docker
     docker:
       - image: docker:17.05.0-ce-git
     steps:
@@ -37,3 +36,10 @@ jobs:
             esac
             docker tag app "jaredallard/triton-converter:${moving_tag}"
             docker push "jaredallard/triton-converter:${moving_tag}"
+
+workflows:
+  version: 2
+  build-test-push:
+    jobs:
+      - build:
+          context: docker
