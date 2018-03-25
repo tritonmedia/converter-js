@@ -19,6 +19,7 @@
     "node-ffprobe": "^1.2.2",
     "request": "^2.85.0",
     "request-promise-native": "^1.0.5",
+    "triton-core": "^1.0.0",
     "webtorrent": "^0.98.24"
   }
 }
