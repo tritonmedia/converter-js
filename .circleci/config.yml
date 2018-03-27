@@ -37,12 +37,38 @@ jobs:
             docker tag app "jaredallard/triton-converter:${moving_tag}"
             docker push "jaredallard/triton-converter:${moving_tag}"
 
+  tests:
+    docker:
+      - image: circleci/node:8.7.0
+    steps:
+      - checkout
+      - restore_cache:
+          key: yarn-{{ checksum "package.json" }}
+          paths: 
+            - node_modules
+      - run: yarn
+      - save_cache:
+          key: yarn-{{ checksum "package.json" }}
+          paths: 
+            - node_modules
+      - run: yarn test
+
 workflows:
   version: 2
-  build-test-push:
+  test-push:
     jobs:
+      - tests:
+          context: Docker
+          filters:
+            branches:
+              only:
+                - master
+                - stage
+                - develop 
       - build:
           context: Docker
+          requires:
+            - tests
           filters:
             branches:
               only:

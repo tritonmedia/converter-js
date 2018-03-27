@@ -27,7 +27,10 @@ debug('init', Date.now())
 const init   = async () => {
   const config = await Config('converter')
 
-/*   if(await fs.exists(K8_TOKEN)) {
+/*   
+  For reference only, old k8 code:
+  
+  if(await fs.exists(K8_TOKEN)) {
     debug('k8', 'we\'re running in kubernetes')
     const core = new K8.Core({
       url: 'https://kubernetes:443',
