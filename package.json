@@ -9,7 +9,6 @@
   "dependencies": {
     "async": "^2.6.0",
     "debug": "^3.1.0",
-    "form-data": "^2.3.2",
     "fs-extra": "^5.0.0",
     "handbrake-js": "https://github.com/jaredallard/handbrake-js",
     "ioredis": "^3.2.2",
