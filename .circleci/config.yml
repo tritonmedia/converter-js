@@ -39,7 +39,7 @@ jobs:
 
   tests:
     docker:
-      - image: circleci/node:8.7.0
+      - image: jaredallard/triton-base
     steps:
       - checkout
       - restore_cache:
