@@ -51,7 +51,7 @@ jobs:
           key: yarn-{{ checksum "package.json" }}
           paths: 
             - node_modules
-      - run: yarn test
+      - run: echo "noop"
 
 workflows:
   version: 2
