@@ -41,7 +41,7 @@ process.on('SIGINT', () => {
 
 // Handle shutdown / reject
 process.on('unhandledRejection', error => {
-  logger.error('Unhandled exception', error)
+  logger.error('Unhandled exception', error.message)
 
   cleanup(1)
 })
