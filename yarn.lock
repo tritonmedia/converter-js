@@ -1571,8 +1571,8 @@ growl@1.10.5:
   resolved "https://registry.yarnpkg.com/growl/-/growl-1.10.5.tgz#f2735dc2283674fa67478b10181059355c369e5e"
 
 "handbrake-js@https://github.com/jaredallard/handbrake-js":
-  version "2.2.2"
-  resolved "https://github.com/jaredallard/handbrake-js#bdca53750e820e44c2feb6a150f3d65b6c057454"
+  version "3.0.0"
+  resolved "https://github.com/jaredallard/handbrake-js#75fe4328a067da97f16aee0ae423bd2168376311"
   dependencies:
     ansi-escape-sequences "^3.0.0"
     command-line-args "^3.0.5"
