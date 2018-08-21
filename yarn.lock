@@ -1572,7 +1572,7 @@ growl@1.10.5:
 
 "handbrake-js@https://github.com/jaredallard/handbrake-js":
   version "3.0.0"
-  resolved "https://github.com/jaredallard/handbrake-js#75fe4328a067da97f16aee0ae423bd2168376311"
+  resolved "https://github.com/jaredallard/handbrake-js#e7155da734cf1d63335b250dfcb3cadb21961d07"
   dependencies:
     ansi-escape-sequences "^3.0.0"
     command-line-args "^3.0.5"
