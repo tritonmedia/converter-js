@@ -6,32 +6,31 @@
  * @version 1
  */
 
-const debug = require('debug')('media:converter')
 const Config = require('triton-core/config')
 const dyn = require('triton-core/dynamics')
 const kue = require('kue')
+const path = require('path')
 const queue = kue.createQueue({
   redis: dyn('redis')
 })
-
-debug.log = console.log.bind(console)
-
-debug('init', Date.now())
+const logger = require('pino')({
+  name: path.basename(__filename)
+})
 
 const init = async () => {
   const config = await Config('converter')
 
-  debug('eval-constraints')
-
   await require('./lib/main')(config, queue)
+
+  logger.info('initialized')
 }
 
 init()
 
 const cleanup = (code = 0) => {
-  debug('cleanup')
+  logger.warn('cleanup() called')
   queue.shutdown(1000, err => {
-    debug('kue:shutdown', err)
+    if (err) logger.warn('queue.shutdown errored:', err)
     process.exit(code)
   })
 }
@@ -42,7 +41,7 @@ process.on('SIGINT', () => {
 
 // Handle shutdown / reject
 process.on('unhandledRejection', error => {
-  debug('Uncaught Execption:', error)
+  logger.error('Unhandled exception', error)
 
   cleanup(1)
 })
