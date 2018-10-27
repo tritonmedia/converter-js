@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: docker:17.05.0-ce-git
+      - image: docker:18.06.1-ce
     steps:
       - checkout
       - setup_remote_docker
@@ -33,8 +33,6 @@ jobs:
       - checkout
       - restore_cache:
           key: yarn-{{ checksum "package.json" }}
-          paths:
-            - node_modules
       - run: yarn
       - save_cache:
           key: yarn-{{ checksum "package.json" }}
