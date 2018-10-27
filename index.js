@@ -17,31 +17,36 @@ const logger = require('pino')({
   name: path.basename(__filename)
 })
 
+const cleanup = async (code = 0) => {
+  return new Promise((resolve, reject) => {
+    logger.warn('cleanup() called')
+    queue.shutdown(1000, err => {
+      if (err) logger.warn('queue.shutdown errored:', err)
+      return resolve()
+    })
+  })
+}
+
 const init = async () => {
   const config = await Config('converter')
 
-  await require('./lib/main')(config, queue)
+  const termHandler = await require('./lib/main')(config, queue)
+
+  const exit = async error => {
+    if (error && typeof error === 'object') {
+      logger.error('Unhandled exception', error.message)
+    }
+
+    await termHandler()
+    await cleanup()
+
+    process.exit(error ? 1 : 0)
+  }
+
+  process.on('SIGINT', exit)
+  process.on('unhandledRejection', exit)
 
   logger.info('initialized')
 }
 
 init()
-
-const cleanup = (code = 0) => {
-  logger.warn('cleanup() called')
-  queue.shutdown(1000, err => {
-    if (err) logger.warn('queue.shutdown errored:', err)
-    process.exit(code)
-  })
-}
-
-process.on('SIGINT', () => {
-  cleanup()
-})
-
-// Handle shutdown / reject
-process.on('unhandledRejection', error => {
-  logger.error('Unhandled exception', error.message)
-
-  cleanup(1)
-})
