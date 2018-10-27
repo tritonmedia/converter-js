@@ -6,21 +6,6 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-      - restore_cache:
-          keys:
-            - v1-{{ .Branch }}
-          paths:
-            - /caches/app.tar
-      - run: docker build -f .circleci/Dockerfile --cache-from=app -t app .
-      - run:
-          name: Save Docker image layer cache
-          command: |
-            mkdir -p /caches
-            docker save -o /caches/app.tar app
-      - save_cache:
-          key: v1-{{ .Branch }}-{{ epoch }}
-          paths:
-            - /caches/app.tar
       - run:
           name: Publish Docker Image
           command: |
@@ -44,14 +29,14 @@ jobs:
       - checkout
       - restore_cache:
           key: yarn-{{ checksum "package.json" }}
-          paths: 
+          paths:
             - node_modules
       - run: yarn
       - save_cache:
           key: yarn-{{ checksum "package.json" }}
           paths: 
             - node_modules
-      - run: echo "noop"
+      - run: yarn test
 
 workflows:
   version: 2
