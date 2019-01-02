@@ -8,7 +8,6 @@
 
 const Config = require('triton-core/config')
 const Tracer = require('triton-core/tracer').initTracer
-const opentracing = require('triton-core/tracer').opentracing
 const dyn = require('triton-core/dynamics')
 const kue = require('kue')
 const path = require('path')
