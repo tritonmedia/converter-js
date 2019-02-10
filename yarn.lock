@@ -4212,9 +4212,9 @@ trim-right@^1.0.1:
   integrity sha1-yy4SAwZ+DI3h9hQJS5/kVwTqYAM=
 
 triton-core@^1.0.0:
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/triton-core/-/triton-core-1.4.3.tgz#5c8ff36dae0dde87eb07021312db2ed7437567a4"
-  integrity sha512-mZa7RN25hGbrucmsMsFXXmQu6iJ+cAmwZ1t7GqXiDk8lddKQNhWQpYQ9nGToKVcYy2YON/crf0whRf4m2HbtaQ==
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/triton-core/-/triton-core-1.4.4.tgz#faef8cffaa8d8d7f7559923a76d3ad2a244b8565"
+  integrity sha512-29dFleSUp7fq6RDEfmfL2YyC5zb2eJ8VmpTfg0b27X6OiHVn8rQ+EVRpPb3UbzH8l+OjsSdN9vNVBNiyrY5QPA==
   dependencies:
     debug "^3.1.0"
     fs-extra "^5.0.0"
