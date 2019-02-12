@@ -20,7 +20,6 @@
     "kubernetes-client": "^5.1.0",
     "kue": "^0.11.6",
     "lodash": "^4.17.5",
-    "minio": "^7.0.5",
     "node-ffprobe": "^1.2.2",
     "pino": "^5.11.1",
     "request": "^2.85.0",
