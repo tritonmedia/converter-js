@@ -298,11 +298,6 @@ async@^1.5.2:
   resolved "https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
   integrity sha1-7GphrlZIDAw8skHJVhjiCJL5Zyo=
 
-async@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/async/-/async-3.1.0.tgz#42b3b12ae1b74927b5217d8c0016baaf62463772"
-  integrity sha512-4vx/aaY6j/j3Lw3fbCHNWP0pPaTCew3F6F3hYyl/tHs/ndmV1q7NW9T5yuJ2XAGwdQrP+6Wu20x06U4APo/iQQ==
-
 asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
@@ -1368,7 +1363,7 @@ globals@^11.1.0, globals@^11.7.0:
   resolved "https://registry.yarnpkg.com/globals/-/globals-11.12.0.tgz#ab8795338868a0babd8525758018c2a7eb95c42e"
   integrity sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==
 
-graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9, graceful-fs@^4.2.0:
+graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.0.tgz#8d8fdc73977cb04104721cb53666c1ca64cd328b"
   integrity sha512-jpSvDPV4Cq/bgtpndIWbI5hmYxhQGHPC4d4cqBPb4DLniCfhJokdXhwhaDuLBGLQdvvRum/UiX6ECVIPvDXqdg==
@@ -1726,13 +1721,6 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-klaw@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/klaw/-/klaw-3.0.0.tgz#b11bec9cf2492f06756d6e809ab73a2910259146"
-  integrity sha512-0Fo5oir+O9jnXu5EefYbVK+mHMBeEVEy2cmctR1O1NECcCkPRreJKrS6Qt/j3KC2C148Dfo9i3pCmCMsdqGr0g==
-  dependencies:
-    graceful-fs "^4.1.9"
-
 lcid@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/lcid/-/lcid-2.0.0.tgz#6ef5d2df60e52f82eb228a4c373e8d1f397253cf"
@@ -2001,11 +1989,6 @@ node-environment-flags@1.0.5:
   dependencies:
     object.getownpropertydescriptors "^2.0.3"
     semver "^5.7.0"
-
-node-ffprobe@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/node-ffprobe/-/node-ffprobe-1.2.2.tgz#ab2e7152c9d2b7e296fce2f77a97ef249baa6d33"
-  integrity sha1-qy5xUsnSt+KW/OL3epfvJJuqbTM=
 
 node-int64@^0.4.0:
   version "0.4.0"
@@ -3040,9 +3023,9 @@ trim-right@^1.0.1:
   integrity sha1-yy4SAwZ+DI3h9hQJS5/kVwTqYAM=
 
 triton-core@^1.10.0:
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/triton-core/-/triton-core-1.11.0.tgz#6753db4552b9a504d1250e49588fee5ca53be47a"
-  integrity sha512-gZ+kBdAbU4AYg9oTocg/UOMuKdof1dtPD6lYr12OXyZtTG7Pl1EI0AGUUXmEkFH8wySrk4Vk2679fEb+HVfevQ==
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/triton-core/-/triton-core-1.12.1.tgz#18734ce04cf89ee84e049553ef4b8e33d3c090f5"
+  integrity sha512-4zQZT0Jm38FbtKEcWzPEd6l1pb74fRypYWTuHVKRchhtArUwD2EvqoOrMfIFA3XLf9yndNaZ9z/wCAKChQdVgQ==
   dependencies:
     amqp-connection-manager "^3.0.0"
     amqplib "^0.5.3"
