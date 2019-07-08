@@ -3023,9 +3023,9 @@ trim-right@^1.0.1:
   integrity sha1-yy4SAwZ+DI3h9hQJS5/kVwTqYAM=
 
 triton-core@^1.10.0:
-  version "1.12.1"
-  resolved "https://registry.yarnpkg.com/triton-core/-/triton-core-1.12.1.tgz#18734ce04cf89ee84e049553ef4b8e33d3c090f5"
-  integrity sha512-4zQZT0Jm38FbtKEcWzPEd6l1pb74fRypYWTuHVKRchhtArUwD2EvqoOrMfIFA3XLf9yndNaZ9z/wCAKChQdVgQ==
+  version "1.12.2"
+  resolved "https://registry.yarnpkg.com/triton-core/-/triton-core-1.12.2.tgz#a605ab3a52edb0c0414fe1fe1005fc387cf37c0f"
+  integrity sha512-gXZq3T3YgXOHlesd/R9lp3/pGb7hh9Rmb+MGfpDjsZ/rK1wAb3XELmYpduDEzQT54zg6/oR7Rmbt+A91Rci1RQ==
   dependencies:
     amqp-connection-manager "^3.0.0"
     amqplib "^0.5.3"
@@ -3254,9 +3254,9 @@ xorshift@^0.2.0:
   integrity sha1-/NgiZ+k1HBPw+5xzMH8lMx0pxjo=
 
 "xtend@>=4.0.0 <4.1.0-0", xtend@^4.0.0, xtend@~4.0.0:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.1.tgz#a5c6d532be656e23db820efb943a1f04998d63af"
-  integrity sha1-pcbVMr5lbiPbgg77lDofBJmNY68=
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.2.tgz#bb72779f5fa465186b1f438f674fa347fdb5db54"
+  integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
 "y18n@^3.2.1 || ^4.0.0", y18n@^4.0.0:
   version "4.0.0"
