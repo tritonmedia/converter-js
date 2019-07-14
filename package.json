@@ -16,7 +16,7 @@
     "express": "^4.17.1",
     "fs-extra": "^8.1.0",
     "handbrake-js": "https://github.com/jaredallard/handbrake-js",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "pino": "^5.12.6",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7",
