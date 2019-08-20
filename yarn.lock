@@ -3033,9 +3033,9 @@ trim-right@^1.0.1:
   integrity sha1-yy4SAwZ+DI3h9hQJS5/kVwTqYAM=
 
 triton-core@^1.19.0:
-  version "1.20.0"
-  resolved "https://registry.yarnpkg.com/triton-core/-/triton-core-1.20.0.tgz#88fe5d26b0c9b3d71a4e452611b47a2536f2462c"
-  integrity sha512-0OXn5ZSALwEHJxaG7IsJnFBsLLTTqr5acZ+G7FHfgHtz3eo91O17Xsapw/vre6HcaOK8/cF9AAAqq9jpn5ZX2A==
+  version "1.22.0"
+  resolved "https://registry.yarnpkg.com/triton-core/-/triton-core-1.22.0.tgz#b8dd1b534b48414f1d44ccfb81cf1587d3caed1d"
+  integrity sha512-He2rycGSi0H+j9LTyEGwHEX6NESh4qoMn+LsITuARxv1Cx7d3nUCY1ldZ1QA2J9BhMHS5TFLpAqf71oqQo9Ulw==
   dependencies:
     amqp-connection-manager "^3.0.0"
     amqplib "^0.5.3"
@@ -3155,10 +3155,15 @@ utils-merge@1.0.1:
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
 
-uuid@^3.0.1, uuid@^3.2.1, uuid@^3.3.2:
+uuid@^3.0.1, uuid@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
   integrity sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==
+
+uuid@^3.2.1:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.3.tgz#4568f0216e78760ee1dbf3a4d2cf53e224112866"
+  integrity sha512-pW0No1RGHgzlpHJO1nsVrHKpOEIxkGg1xB+v0ZmdNH5OAeAwzAVrCnI2/6Mtx+Uys6iaylxa+D3g4j63IKKjSQ==
 
 v8-compile-cache@^2.0.3:
   version "2.0.3"
