@@ -3033,9 +3033,9 @@ trim-right@^1.0.1:
   integrity sha1-yy4SAwZ+DI3h9hQJS5/kVwTqYAM=
 
 triton-core@^1.19.0:
-  version "1.23.0"
-  resolved "https://registry.yarnpkg.com/triton-core/-/triton-core-1.23.0.tgz#e46ff791cccf6cf62906d945afbf0c5862d64821"
-  integrity sha512-L5D+faEpDgSFyF+U/Fhf338EK7dRRT1uOsUDaHZePgh+Gh9Bw48+S98ZKc7pUC9mlAGiQGAWpCJQvI4Zc7gzqg==
+  version "1.24.0"
+  resolved "https://registry.yarnpkg.com/triton-core/-/triton-core-1.24.0.tgz#ac5da52ee44f2e7e6d5bf991687bf9678e7d75b9"
+  integrity sha512-uGoEJWT3vSJz2/J3jCHiG/tP2gwt+7ZGaklL3LQ4fy2HR7XZEAe7trosc36ClWmwFfT97lv50nB9xty4x2OU4g==
   dependencies:
     amqp-connection-manager "^3.0.0"
     amqplib "^0.5.3"
