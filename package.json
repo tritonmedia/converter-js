@@ -17,21 +17,21 @@
     "fs-extra": "^8.1.0",
     "handbrake-js": "https://github.com/jaredallard/handbrake-js",
     "lodash": "^4.17.15",
-    "pino": "^5.13.0",
+    "pino": "^5.13.3",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7",
-    "triton-core": "^1.19.0"
+    "triton-core": "^1.27.1"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.2",
+    "babel-eslint": "^10.0.3",
     "chai": "^4.2.0",
-    "eslint": "^6.1.0",
-    "eslint-config-standard": "^13.0.1",
+    "eslint": "^6.4.0",
+    "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-mocha": "^6.0.0",
-    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-mocha": "^6.1.1",
+    "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-standard": "^4.0.1",
     "mocha": "^6.2.0",
     "mocha-eslint": "^5.0.0"
   }
