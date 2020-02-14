@@ -1,4 +1,4 @@
-FROM jaredallard/triton-base:ubuntu
+FROM tritonmedia/base:ubuntu
 
 COPY --chown=999:999 package.json /stack
 RUN yarn --production=true --frozen-lockfile
