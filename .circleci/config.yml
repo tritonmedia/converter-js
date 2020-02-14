@@ -7,8 +7,8 @@ jobs:
     - setup_remote_docker:
         version: 18.09.3
     - run:
-        command: DOCKER_BUILDKIT=1 docker build -t tritonmedia/converter -f Dockerfile
-          .
+        command: DOCKER_BUILDKIT=1 docker build --progress=plain -t tritonmedia/converter
+          -f Dockerfile .
         name: Build "tritonmedia/converter" Docker Image
     - run:
         command: echo "$DOCKER_PASSWORD" | docker login --username "${DOCKER_USERNAME}"
