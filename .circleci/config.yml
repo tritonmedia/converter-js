@@ -1,64 +1,44 @@
-version: 2
 jobs:
   build:
     docker:
-      - image: docker:18.06.1-ce
+    - image: docker:19.03.5
     steps:
-      - checkout
-      - setup_remote_docker
-      - run:
-          name: Build Docker Image
-          command: |
-            docker build -t app -f .circleci/Dockerfile .
-      - run:
-          name: Publish Docker Image
-          command: |
-            set -e
-            docker login --username "${DOCKER_USERNAME}" --password "${DOCKER_PASSWORD}"
-            case "$CIRCLE_BRANCH" in
-              master) export moving_tag="prod"
-                ;;
-              stage) export moving_tag="beta"
-                ;;
-              *) export moving_tag="alpha"
-                ;;
-            esac
-            docker tag app "jaredallard/triton-converter:${moving_tag}"
-            docker push "jaredallard/triton-converter:${moving_tag}"
-
+    - checkout
+    - setup_remote_docker:
+        version: 18.09.3
+    - run:
+        command: DOCKER_BUILDKIT=1 docker build -t tritonmedia/converter -f Dockerfile
+          .
+        name: Build "tritonmedia/converter" Docker Image
+    - run:
+        command: echo "$DOCKER_PASSWORD" | docker login --username "${DOCKER_USERNAME}"
+          --password-stdin && docker push tritonmedia/converter
+        name: Publish "tritonmedia/converter" Docker Image
   tests:
     docker:
-      - image: jaredallard/triton-base
+    - image: tritonmedia/base
     steps:
-      - checkout
-      - restore_cache:
-          key: yarn-{{ checksum "package.json" }}
-      - run: yarn
-      - save_cache:
-          key: yarn-{{ checksum "package.json" }}
-          paths: 
-            - node_modules
-      - run: yarn test
-
+    - checkout
+    - restore_cache:
+        key: yarn-{{ checksum "package.json" }}
+    - run:
+        command: yarn --frozen-lockfile
+        name: Fetch Dependencies
+    - save_cache:
+        key: yarn-{{ checksum "package.json" }}
+        paths:
+        - node_modules
+    - run:
+        command: yarn test
+        name: Run Tests
+version: 2
 workflows:
-  version: 2
-  test-push:
+  build-push:
     jobs:
-      - tests:
-          context: Docker
-          filters:
-            branches:
-              only:
-                - master
-                - stage
-                - develop 
-      - build:
-          context: Docker
-          requires:
-            - tests
-          filters:
-            branches:
-              only:
-                - master
-                - stage
-                - develop
+    - tests:
+        context: Docker
+    - build:
+        context: Docker
+        requires:
+        - tests
+  version: 2
