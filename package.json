@@ -18,7 +18,7 @@
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "fs-extra": "^8.1.0",
     "handbrake-js": "https://github.com/jaredallard/handbrake-js",
     "lodash": "^4.17.15",
